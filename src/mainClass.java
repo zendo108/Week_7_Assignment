@@ -20,17 +20,16 @@ public class mainClass {
     public static final int NUMBER_Of_ROWS = 3;
     
     public static void main(String[] args) {
-        // TODO code application logic here
+        // Create an instance of MatrixManager
         MatrixManager myMatrixManager = new MatrixManager();
+        //Create a matrix using the matrix manager
+        // it takes NUMBER_Of_COLUMNS,NUMBER_Of_ROWS, and an unlimited numeber of integers
+        // only the ones that are needed are used or circle around if not enough integers
         int[][] m = myMatrixManager.createMatrix(NUMBER_Of_COLUMNS,NUMBER_Of_ROWS,6,2,3,3,1,6,7,5,9);
-        
-//        for(int[] r: m){
-//            for(int c: r){
-//                System.out.println(c);
-//            }
-//        }
-        
+
+        //calculating Primary Diagonal
         myMatrixManager.getPrimaryDiagonal(m);
+        //calculating Secondary Diagonal
         myMatrixManager.getSecondaryDiagonal(m);
     }
     

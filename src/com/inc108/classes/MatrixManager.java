@@ -12,7 +12,11 @@ package com.inc108.classes;
 public class MatrixManager {
     
     
-    
+    /**
+     * 
+     * @param m is a two dimensional array
+     * it calculates the Primary Diagonal
+     */
     public void getPrimaryDiagonal(int[][] m){
         int sum = 0;
         if(m !=null && isSquareMatrix(m)){
@@ -25,7 +29,12 @@ public class MatrixManager {
         }
     }
     
-    public int getSecondaryDiagonal(int[][] m){
+    /**
+     * 
+     * @param m is a two dimensional array
+     * it calculates the Secondary Diagonal 
+     */
+    public void getSecondaryDiagonal(int[][] m){
         int sum = 0;
         if(m !=null && isSquareMatrix(m)){
             for(int i=0, j=m[0].length-1;i<m.length;i++,j--){
@@ -35,9 +44,13 @@ public class MatrixManager {
         }else{
             System.out.println("Number of columns and rows must be equal");
         }
-        return 0;
     }
     
+    /**
+     * 
+     * @param m
+     * @return true or false if matrix is square
+     */
     boolean isSquareMatrix(int[][] m){
         
         if(m !=null && m.length == m[0].length){
